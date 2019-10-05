@@ -120,6 +120,77 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &34875492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 34875493}
+  - component: {fileID: 34875494}
+  - component: {fileID: 34875495}
+  m_Layer: 0
+  m_Name: JumpCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &34875493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34875492}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.07624827, y: -0.24151334, z: -15.185733}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 599987289}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &34875494
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34875492}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.071090266, y: -0.105347484}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.07168096, y: 0.012329161}
+  m_EdgeRadius: 0
+--- !u!114 &34875495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34875492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaebc20e8fadfc54e9b75badcded2cdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAbleToJump: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +244,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3.17
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -216,6 +287,7 @@ GameObject:
   - component: {fileID: 599987287}
   - component: {fileID: 599987286}
   - component: {fileID: 599987290}
+  - component: {fileID: 599987291}
   m_Layer: 0
   m_Name: Bob
   m_TagString: Untagged
@@ -243,7 +315,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!60 &599987287
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -261,19 +333,49 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.5, y: 0.7}
+    newSize: {x: 0.5, y: 0.7}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5}
-      - {x: -0.47552827, y: 0.15450849}
-      - {x: -0.2938926, y: -0.40450853}
-      - {x: 0.29389268, y: -0.40450847}
-      - {x: 0.47552824, y: 0.15450856}
+    - - {x: 0.015390307, y: 0.09721865}
+      - {x: -0.026121587, y: 0.109907925}
+      - {x: -0.06362316, y: 0.10115123}
+      - {x: -0.06299558, y: 0.021759458}
+      - {x: -0.08121872, y: -0.029889166}
+      - {x: -0.073618025, y: -0.100365706}
+      - {x: -0.069535196, y: -0.11118232}
+      - {x: -0.15062806, y: -0.12845063}
+      - {x: -0.15377787, y: -0.17410791}
+      - {x: -0.14359313, y: -0.18492228}
+      - {x: -0.079562664, y: -0.18572257}
+      - {x: -0.07545939, y: -0.270961}
+      - {x: -0.054044604, y: -0.28552443}
+      - {x: -0.04737386, y: -0.29115742}
+      - {x: -0.046431392, y: -0.33440822}
+      - {x: -0.04308656, y: -0.34055015}
+      - {x: -0.03528261, y: -0.3445383}
+      - {x: -0.032943934, y: -0.3504643}
+      - {x: -0.022362232, y: -0.35085186}
+      - {x: 0.0025386214, y: -0.3508498}
+      - {x: 0.012064874, y: -0.35066321}
+      - {x: 0.031326443, y: -0.3510111}
+      - {x: 0.043664575, y: -0.3505074}
+      - {x: 0.056272805, y: -0.34592026}
+      - {x: 0.06329729, y: -0.31102157}
+      - {x: 0.066111535, y: -0.28162858}
+      - {x: 0.085640386, y: -0.27221215}
+      - {x: 0.09101069, y: -0.18845098}
+      - {x: 0.15065373, y: -0.18669909}
+      - {x: 0.16211894, y: -0.15295485}
+      - {x: 0.14905733, y: -0.12592833}
+      - {x: 0.07940221, y: -0.12283595}
+      - {x: 0.07402359, y: -0.103797264}
+      - {x: 0.08612266, y: 0.025618918}
+      - {x: 0.08216962, y: 0.09243359}
 --- !u!212 &599987288
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -311,12 +413,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7264735c510351742aee7f51e4022fa9, type: 3}
-  m_Color: {r: 0.9150943, g: 0.53180933, b: 0.14244394, a: 1}
+  m_Sprite: {fileID: 21300000, guid: f9c616a4116258b49916b3104564b107, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 0.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -334,6 +436,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 519420032}
+  - {fileID: 34875493}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -350,6 +453,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+--- !u!114 &599987291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599987285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eeed9e4c0b1d4f4e945639337c4fdff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpSpeed: 5
+  jumpCollider: {fileID: 34875495}
+  rigidbody: {fileID: 599987286}
 --- !u!1 &1992781129
 GameObject:
   m_ObjectHideFlags: 0
