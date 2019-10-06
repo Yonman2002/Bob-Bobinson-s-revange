@@ -7,6 +7,7 @@ public class Direction : MonoBehaviour
     public GameObject gameObject;
     public Rigidbody2D rigidbody;
     public AdvancedAnimation animation;
+    public AdvancedAnimation idle;
 
     // Start is called before the first frame update
     void Start()
@@ -20,9 +21,11 @@ public class Direction : MonoBehaviour
         if (rigidbody.velocity.x == 0)
         {
             animation.Active = false;
+            idle.StartAnimations();
         }
         else if (rigidbody.velocity.x > 0)
         {
+            idle.Active = false;
             animation.StartAnimations();
             //gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0.5f);
             gameObject.transform.localEulerAngles = new Vector3(0, 0, 0);

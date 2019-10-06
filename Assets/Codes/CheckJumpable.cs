@@ -20,11 +20,17 @@ public class CheckJumpable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        isAbleToJump = true;
+        if (collision.gameObject.tag != "Item")
+        {
+            isAbleToJump = true;
+        }        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        isAbleToJump = false;
+        if (collision.gameObject.tag != "Item")
+        {
+            isAbleToJump = false;
+        }        
     }
 }
