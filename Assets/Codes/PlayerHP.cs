@@ -29,7 +29,8 @@ public class PlayerHP : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             hp--;
-            healthBar.transform.localScale = new Vector3(hp, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+            healthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(hp * 20, 14);
+            //healthBar.transform.localScale = new Vector3(hp, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
         }
     }
 }
