@@ -9,6 +9,7 @@ public class PlayerHP : MonoBehaviour
     public int hp;
     public Image healthBar;
     public string scene;
+    private float count = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class PlayerHP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        count += Time.deltaTime;
         if (hp <= 0)
         {
             SceneManager.LoadScene(scene);
@@ -28,9 +30,12 @@ public class PlayerHP : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            hp--;
-            healthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(hp * 20, 14);
-            //healthBar.transform.localScale = new Vector3(hp, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+            if (count >= 2f)
+            {
+                count = 0;
+                hp--;
+                healthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(hp * 20, 14);
+            }
         }
     }
 }

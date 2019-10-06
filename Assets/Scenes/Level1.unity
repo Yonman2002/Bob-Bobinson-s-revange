@@ -607,7 +607,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 599987285}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 37d019a9427b3ec4ab7682536096df8c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1322,7 +1322,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1401152421}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 37d019a9427b3ec4ab7682536096df8c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2054,7 +2054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eeed9e4c0b1d4f4e945639337c4fdff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 8
+  jumpSpeed: 6
   jumpCollider: {fileID: 34875495}
   rigidbody: {fileID: 1848494760}
 --- !u!114 &1848494759
@@ -3261,7 +3261,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 6914309512650781593}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 37d019a9427b3ec4ab7682536096df8c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -3312,6 +3312,57 @@ PolygonCollider2D:
       - {x: 0.07402359, y: -0.103797264}
       - {x: 0.08612266, y: 0.025618918}
       - {x: 0.08216962, y: 0.09243359}
+--- !u!114 &6914309512650781595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6914309512650781593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6213a9e6d08934ab611dd4b7f9f4ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpSpeed: 6
+  rigidbody: {fileID: 6914309512650781597}
+--- !u!50 &6914309512650781597
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6914309512650781593}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &6914309512650781598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6914309512650781593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 827901034cf0b33478a888ee0ef5c550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  range: 10
+  target: {fileID: 1848494754}
+  rigidbody: {fileID: 6914309512650781597}
 --- !u!1 &6968032789011664258
 GameObject:
   m_ObjectHideFlags: 0
