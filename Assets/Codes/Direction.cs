@@ -18,20 +18,21 @@ public class Direction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rigidbody.velocity.x == 0)
+        if (Input.GetAxis("Horizontal") == 0)
         {
             animation.Active = false;
             idle.StartAnimations();
         }
-        else if (rigidbody.velocity.x > 0)
+        else if (Input.GetAxis("Horizontal") > 0)
         {
             idle.Active = false;
             animation.StartAnimations();
             //gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0.5f);
             gameObject.transform.localEulerAngles = new Vector3(0, 0, 0);
         }
-        else
+        else if (Input.GetAxis("Horizontal") < 0)
         {
+            idle.Active = false;
             animation.StartAnimations();
             //gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -0.5f);
             gameObject.transform.localEulerAngles = new Vector3(0, 180, 0);
